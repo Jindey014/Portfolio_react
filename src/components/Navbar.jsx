@@ -9,6 +9,12 @@ const Navbar = () => {
   const menuOpen = () => {
     setIsOpen(!isOpen)
   }
+  const handleLinkedinRedirect = () => {
+    window.location.href = 'https://www.linkedin.com/in/jinish-shrestha/' // Direct to Google
+  }
+  const handleGithubRedirect = () => {
+    window.location.href = 'https://github.com/Jindey014' // Direct to Google
+  }
 
   return (
     <nav className="fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 text-white backdrop-blur-md md:justify-evenly py-6">
@@ -48,10 +54,10 @@ const Navbar = () => {
       {/* SOCIAL LINKS */}
       <ul className="hidden md:flex gap-5">
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-          <BsLinkedin />
+          <BsLinkedin onClick={handleLinkedinRedirect} />
         </li>
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-          <BsGithub />
+          <BsGithub onClick={handleGithubRedirect} />
         </li>
       </ul>
 
@@ -100,10 +106,11 @@ const Navbar = () => {
           </ul>
           <ul className="flex flex-wrap gap-5">
             <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-              <BsLinkedin />
+              <BsLinkedin onClick={handleLinkedinRedirect} />
             </li>
+
             <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-              <BsGithub />
+              <BsGithub onClick={handleGithubRedirect} />
             </li>
           </ul>
         </div>
